@@ -19,6 +19,11 @@
 #define zmk_keymap_highest_layer_active zmk_keymap_highest_layer_index
 #endif
 
+// もし highest_layer_active がなくて highest_layer_index がある場合、あるいはその逆を想定
+#if !defined(zmk_keymap_highest_layer_index) && defined(zmk_keymap_highest_layer_active)
+#define zmk_keymap_highest_layer_index zmk_keymap_highest_layer_active
+#endif
+
 #include <zephyr/logging/log.h>
 LOG_MODULE_REGISTER(pmw3610, CONFIG_INPUT_LOG_LEVEL);
 
