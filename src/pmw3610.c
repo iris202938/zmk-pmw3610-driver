@@ -15,9 +15,9 @@
 #include <zephyr/input/input.h>
 #include <zmk/keymap.h>
 #include "pmw3610.h"
-#ifndef zmk_keymap_highest_layer_active
-#define zmk_keymap_highest_layer_active zmk_keymap_highest_layer_index
-#endif
+// #ifndef zmk_keymap_highest_layer_active
+// #define zmk_keymap_highest_layer_active zmk_keymap_highest_layer_index
+// #endif
 
 // もし highest_layer_active がなくて highest_layer_index がある場合、あるいはその逆を想定
 #if !defined(zmk_keymap_highest_layer_index) && defined(zmk_keymap_highest_layer_active)
