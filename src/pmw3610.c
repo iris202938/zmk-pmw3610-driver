@@ -15,6 +15,9 @@
 #include <zephyr/input/input.h>
 #include <zmk/keymap.h>
 #include "pmw3610.h"
+#ifndef zmk_keymap_highest_layer_active
+#define zmk_keymap_highest_layer_active zmk_keymap_highest_layer_index
+#endif
 
 #include <zephyr/logging/log.h>
 LOG_MODULE_REGISTER(pmw3610, CONFIG_INPUT_LOG_LEVEL);
